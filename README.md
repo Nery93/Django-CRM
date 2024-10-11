@@ -6,28 +6,28 @@
 
 
 
-## **Descrição do Projeto**
+## **Project Description**
 
-Este é um sistema CRM (Customer Relationship Management) desenvolvido em Django, que permite a gestão de clientes e leads para pequenas e médias empresas. 
-Ele foi projetado para gerenciar interações com clientes, otimizar processos de vendas e melhorar o relacionamento com os clientes.
+This is a CRM (Customer Relationship Management) system developed in Django, which enables customer and lead management for small and medium-sized businesses. 
+It is designed to manage customer interactions, optimize sales processes and improve customer relations.
 
-O sistema oferece funcionalidades como gerenciamento de leads, autenticação de usuários e filtragem de dados.
+The system offers features such as lead management, user authentication and data filtering.
 
-### **Funcionalidades**
+### **Functionalities**
 
-- **Gerenciamento de leads:** Permite adicionar, editar e remover leads do sistema.
-- **Autenticação de usuários:** Inclui sistema de login e logout seguro.
-- **Filtragem de dados:** Pesquise e filtre leads por vários critérios.
-- **Dashboard intuitivo:** Exibe as principais informações de maneira amigável.
-- **Base de dados com MySQL:** Utiliza o MySQL como sistema de gerenciamento de banco de dados.
-- **Interface responsiva:** Criada usando Bootstrap para garantir uma boa experiência de usuário em dispositivos móveis e desktops.
+- Lead management: Allows you to add, edit and remove leads from the system.
+- **User authentication:** Includes a secure login and logout system.
+- Data filtering:** Search and filter leads by various criteria.
+- Intuitive dashboard:** Displays key information in a user-friendly way.
+- Database with MySQL:** Uses MySQL as the database management system.
+- Responsive interface:** Created using Bootstrap to guarantee a good user experience on mobile devices and desktops.
 
-### **Tecnologias Utilizadas**
+### **Technologies Used**
 
 - Python 3.11
 - Django 4.2
 - MySQL
-- Bootstrap 5 (para layout responsivo)
+- Bootstrap 5 (for responsive layout)
 
 - ![image](https://github.com/user-attachments/assets/d09b5a35-06df-471e-978e-02435a03acce)
 
