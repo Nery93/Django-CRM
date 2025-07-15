@@ -99,3 +99,11 @@ def update_record(request, pk):
 	else:
 		messages.success(request, "You Must Be Logged In...")
 		return redirect('home')
+
+
+def capabilities(request):
+	"""
+	Display the system capabilities page showing what the CRM can do.
+	This page answers "O que voce pode fazer?" (What can you do?)
+	"""
+	return render(request, 'capabilities.html')

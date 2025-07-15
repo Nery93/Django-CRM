@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h2><i class="fas fa-info-circle"></i> O que você pode fazer? - System Capabilities</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="text-primary">🔐 User Management</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item"><strong>User Registration:</strong> Create new user accounts with email validation</li>
+              <li class="list-group-item"><strong>Secure Login/Logout:</strong> Authentication system with session management</li>
+              <li class="list-group-item"><strong>Password Protection:</strong> Strong password requirements and validation</li>
+              <li class="list-group-item"><strong>User Profiles:</strong> First name, last name, and email management</li>
+            </ul>
+
+            <h4 class="text-success">👥 Customer Record Management</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item"><strong>Add New Records:</strong> Create customer profiles with complete contact information</li>
+              <li class="list-group-item"><strong>View All Records:</strong> Browse all customer data in an organized table format</li>
+              <li class="list-group-item"><strong>Edit Records:</strong> Update existing customer information</li>
+              <li class="list-group-item"><strong>Delete Records:</strong> Remove outdated or incorrect customer data</li>
+              <li class="list-group-item"><strong>Detailed View:</strong> Access individual customer record details</li>
+            </ul>
+          </div>
+          
+          <div class="col-md-6">
+            <h4 class="text-warning">📊 Data Management Features</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item"><strong>Complete Contact Info:</strong> Store name, email, phone, address, city, state, zip</li>
+              <li class="list-group-item"><strong>Automatic Timestamps:</strong> Track when each record was created</li>
+              <li class="list-group-item"><strong>Unique Identifiers:</strong> Each record has a unique ID for tracking</li>
+              <li class="list-group-item"><strong>Data Validation:</strong> Form validation ensures data integrity</li>
+            </ul>
+
+            <h4 class="text-info">🛡️ Security Features</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item"><strong>Authentication Required:</strong> Only logged-in users can access customer data</li>
+              <li class="list-group-item"><strong>CSRF Protection:</strong> Cross-site request forgery protection</li>
+              <li class="list-group-item"><strong>Session Management:</strong> Secure user sessions with automatic logout</li>
+              <li class="list-group-item"><strong>Database Security:</strong> MySQL backend with secure connections</li>
+            </ul>
+
+            <h4 class="text-dark">💻 Technical Capabilities</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item"><strong>Responsive Design:</strong> Works on desktop, tablet, and mobile devices</li>
+              <li class="list-group-item"><strong>Bootstrap UI:</strong> Modern, professional interface</li>
+              <li class="list-group-item"><strong>MySQL Database:</strong> Robust data storage and retrieval</li>
+              <li class="list-group-item"><strong>Django Framework:</strong> Built on Python's most popular web framework</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <div class="alert alert-info">
+              <h5><i class="fas fa-lightbulb"></i> What This System Is Perfect For:</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul>
+                    <li>Small to medium businesses managing customer relationships</li>
+                    <li>Sales teams tracking leads and prospects</li>
+                    <li>Service businesses maintaining client contact information</li>
+                    <li>Organizations needing secure customer data management</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                    <li>Teams requiring multi-user access to customer data</li>
+                    <li>Businesses needing organized contact management</li>
+                    <li>Companies wanting to track customer creation dates</li>
+                    <li>Organizations requiring web-based access to customer data</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <div class="card bg-light">
+              <div class="card-body">
+                <h5 class="card-title">🚀 Getting Started</h5>
+                <p class="card-text">
+                  {% if user.is_authenticated %}
+                    Welcome {{ user.first_name }}! You're already logged in and can start managing customer records right away.
+                    <a href="{% url 'add_record' %}" class="btn btn-primary btn-sm">Add Your First Record</a>
+                  {% else %}
+                    To get started with this CRM system:
+                    <a href="{% url 'register' %}" class="btn btn-success btn-sm">Register</a> a new account or 
+                    <a href="{% url 'home' %}" class="btn btn-primary btn-sm">Login</a> if you already have one.
+                  {% endif %}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
